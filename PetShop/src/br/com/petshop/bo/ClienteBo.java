@@ -1,20 +1,22 @@
 package br.com.petshop.bo;
 
-import java.util.UUID;
-
 import br.com.petshop.beans.Cliente;
+import br.com.petshop.beans.Endereco;
 
 public class ClienteBo {
-	
-	//criacao de metodos
-	
-	public void cadastraCliente(String nome, String cpf, String endereco) {
-		//INSTANCIACAO
+
+	public Cliente cadastraCliente(String nome, String cpf, String rua, int numero, String bairro, String cidade, String estado) {
 		Cliente c = new Cliente();
-		//CRIA ID RANDOMICO NÃO REPETITIVO
-		c.setIdCliente(UUID.randomUUID().toString());
 		c.setNome(nome);
 		c.setCpf(cpf);
-		c.setEndereco(endereco);
+		Endereco e = new Endereco();
+		e.setRua(rua);
+		e.setNumero(numero);
+		e.setBairro(bairro);
+		e.setCidade(cidade);
+		e.setEstado(estado);
+		c.setEndereco(e);
+		
+		return c;
 	}
 }

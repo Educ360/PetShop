@@ -1,10 +1,10 @@
 package br.com.petshop.beans;
 
-public class Pessoa {
+public abstract class Pessoa {
 	
 	private String nome;
 	private String cpf;
-	private String endereco;
+	private Endereco endereco;
 	
 	public String getNome() {
 		return nome;
@@ -18,13 +18,11 @@ public class Pessoa {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public String getEndereco() {
+	public Endereco getEndereco() {
 		return endereco;
 	}
-	public void setEndereco(String endereco) {
+	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	
-	
 
 }

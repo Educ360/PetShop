@@ -1,22 +1,16 @@
 package br.com.petshop.beans;
 
+//tudo que existe na PESSOA existe no Funcionario + as caracteristica individuais de FUNCIONARIO
 public class Funcionario extends Pessoa{
 	
-	private int idFuncionario;
-	private String cargo;
+	private String idFunc;
 	private double salario;
-	
-	public int getIdFuncionario() {
-		return idFuncionario;
+	private String cargo;
+	public String getIdFunc() {
+		return idFunc;
 	}
-	public void setIdFuncionario(int idFuncionario) {
-		this.idFuncionario = idFuncionario;
-	}
-	public String getCargo() {
-		return cargo;
-	}
-	public void setCargo(String cargo) {
-		this.cargo = cargo;
+	public void setIdFunc(String idFunc) {
+		this.idFunc = idFunc;
 	}
 	public double getSalario() {
 		return salario;
@@ -24,7 +18,13 @@ public class Funcionario extends Pessoa{
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
+	public String getCargo() {
+		return cargo;
+	}
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
 	
 	
-	
+
 }
